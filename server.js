@@ -1,6 +1,6 @@
 // server.js — Telegram webhook + расширенное меню (Node 18+)
-const express = require('express');
-
+const express = require('express'); 
+const { ensureUser, addPoints, getPoints, getTop } = require('./db');
 const TOKEN  = process.env.TELEGRAM_BOT_TOKEN;
 const SECRET = process.env.TELEGRAM_WEBHOOK_SECRET;
 const PORT   = process.env.PORT || 3000;
